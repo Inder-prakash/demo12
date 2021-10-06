@@ -1,0 +1,9 @@
+<p>pagingtest works!</p>
+<!-- <input type="button" (click)="load()"> -->
+<div *ngFor="let a of allProducts">
+    &nbsp;  &nbsp;<label>{{a.name}}</label>
+</div>
+<ngb-pagination (pageChange)="pageChanged($event)"
+class="d-flex justify-content-center"  [collectionSize]="collectionSize"
+ [(page)]="page" [maxSize]="5"
+ [rotate]="true" [ellipses]="false" [boundaryLinks]="true"></ngb-pagination>
